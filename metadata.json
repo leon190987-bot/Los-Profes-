@@ -1,0 +1,6 @@
+{
+  "name": "Hamburguesas y Papas en Cono Los Profes",
+  "description": "Menú interactivo con pedidos en línea vía WhatsApp y ubicación para Hamburguesas y Papas en Cono Los Profes en Santander Jiménez, Tamaulipas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

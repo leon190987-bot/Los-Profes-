@@ -1,0 +1,265 @@
+import { MenuItem, RestaurantInfo } from '../types';
+
+import imgClasica from '../assets/images/burger_clasica_nueva_1787537482748.jpg';
+import imgCopiona from '../assets/images/burger_copiona_1787535612984.jpg';
+import imgDelDiez from '../assets/images/burger_del_diez_1787535626657.jpg';
+import imgTragapuntos from '../assets/images/burger_tragapuntos_aros_dentro_1787537494523.jpg';
+import imgDirectora from '../assets/images/burger_directora_1787535657460.jpg';
+import imgLaReprobada from '../assets/images/burger_la_reprobada_1787537505892.jpg';
+import imgPapasGajo from '../assets/images/papas_gajo_1787535668742.jpg';
+import imgConoBoneless from '../assets/images/cono_boneless_1787535681753.jpg';
+import imgConoPastor from '../assets/images/cono_pastor_1787535693962.jpg';
+import imgConoFajita from '../assets/images/cono_fajita_1787535706213.jpg';
+
+export const RESTAURANT_INFO: RestaurantInfo = {
+  name: 'LOS PROFES',
+  subtitle: 'Hamburguesas y Papas en Cono',
+  tagline: '¡Nuestra carne es 100% Casera!',
+  phone: '834 254 6215',
+  phoneRaw: '8342546215',
+  whatsappNumber: '528342546215',
+  address: 'Calle Emilio Carranza, Zona Centro',
+  city: 'Santander Jiménez',
+  state: 'Tamaulipas',
+  postalCode: '87700',
+  country: 'México',
+  fullAddress: 'Calle Emilio Carranza, Zona Centro, 87700 Santander Jiménez, Tamps., México',
+  facebookUrl: 'https://www.facebook.com/share/1EqjEFmXqF/?mibextid=wwXIfr',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Calle+Emilio+Carranza,+Zona+Centro,+87700+Santander+Jim%C3%A9nez,+Tamps.',
+};
+
+export const AVAILABLE_ADEREZOS = [
+  { id: 'salsa-bufalo', name: 'Salsa Búfalo', desc: 'Picante tradicional con mantequilla y chiles' },
+  { id: 'bufalo-ranch', name: 'Salsa Búfalo Ranch', desc: 'Mezcla cremosa de aderezo ranch y picante búfalo' },
+  { id: 'bufalo-parmesano', name: 'Salsa Búfalo Parmesano', desc: 'Salsa búfalo intensa con queso parmesano' },
+  { id: 'salsa-ranch', name: 'Salsa Ranch', desc: 'Aderezo cremoso clásico de hierbas y crema' },
+  { id: 'limon-pepper', name: 'Salsa Limón Pepper', desc: 'Cítrico natural con pimienta negra molida' },
+  { id: 'salsa-bbq', name: 'Salsa BBQ', desc: 'Ahumada y dulce a base de tomate y especias' },
+  { id: 'bbq-picosita', name: 'Salsa BBQ Picosita', desc: 'Salsa BBQ tradicional con un toque picante especial' },
+  { id: 'valentina', name: 'Valentina', desc: 'Clásica salsa botanera de chiles secos' },
+  { id: 'salsa-picosita', name: 'Salsa Picosita', desc: 'Salsa roja brava casera de chiles de árbol' },
+  { id: 'tocino-deshidratado', name: 'Tocino Deshidratado', desc: 'Trocitos crujientes de tocino ahumado' },
+  { id: 'salsa-cheddar', name: 'Salsa Cheddar', desc: 'Queso cheddar calientito y fundido' },
+  { id: 'mango-habanero', name: 'Salsa Mango Habanero', desc: 'Pulpa de mango dulce con chile habanero' },
+  { id: 'aderezo-casa', name: 'Aderezo de la Casa', desc: 'Receta secreta cremosa especial de la casa' },
+];
+
+export const MENU_ITEMS: MenuItem[] = [
+  // --- HAMBURGUESAS ---
+  {
+    id: 'la-clasica',
+    name: 'La Clásica',
+    description: 'Carne de res 120 gr, queso amarillo, jamón, lechuga, tomate, cebolla, aderezo de la casa y mayonesa. ¡Aprovecha la promo por $110 con refresco!',
+    category: 'hamburguesas',
+    basePrice: 85,
+    badge: '¡PROMO $110 con Refresco!',
+    imageUrl: imgClasica,
+    ingredients: [
+      'Carne de res 120 gr',
+      'Queso amarillo',
+      'Jamón',
+      'Lechuga',
+      'Tomate',
+      'Cebolla',
+      'Aderezo de la casa',
+      'Mayonesa',
+    ],
+    variants: [
+      { id: 'orig', name: 'Original', price: 85 },
+      { id: 'con-papas', name: 'Con Papas a la Francesa', price: 95 },
+      { id: 'promo-refresco', name: 'Promo con Refresco', price: 110 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+  {
+    id: 'la-copiona',
+    name: 'La Copiona',
+    description: 'Carne de res 120gr, queso amarillo, jamón, lechuga, tomate, cebolla, aderezo de la casa, salchicha roja, salchicha para hot dog y mayonesa.',
+    category: 'hamburguesas',
+    basePrice: 100,
+    imageUrl: imgCopiona,
+    ingredients: [
+      'Carne de res 120gr',
+      'Queso amarillo',
+      'Jamón',
+      'Lechuga',
+      'Tomate',
+      'Cebolla',
+      'Aderezo de la casa',
+      'Salchicha roja',
+      'Salchicha para hot dog',
+      'Mayonesa',
+    ],
+    variants: [
+      { id: 'orig', name: 'Original', price: 100 },
+      { id: 'con-papas', name: 'Con Papas a la Francesa', price: 110 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+  {
+    id: 'la-del-diez',
+    name: 'La Del Diez',
+    description: 'Carne de res 120gr, queso amarillo, queso blanco, costra de queso, jamón, lechuga, tomate, cebolla, aderezo de la casa y mayonesa.',
+    category: 'hamburguesas',
+    basePrice: 105,
+    imageUrl: imgDelDiez,
+    ingredients: [
+      'Carne de res 120gr',
+      'Queso amarillo',
+      'Queso blanco',
+      'Costra de queso',
+      'Jamón',
+      'Lechuga',
+      'Tomate',
+      'Cebolla',
+      'Aderezo de la casa',
+      'Mayonesa',
+    ],
+    variants: [
+      { id: 'orig', name: 'Original', price: 105 },
+      { id: 'con-papas', name: 'Con Papas a la Francesa', price: 115 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+  {
+    id: 'la-tragapuntos',
+    name: 'La Tragapuntos',
+    description: 'Carne de res 120gr, queso amarillo, aros de cebolla, tocino, BBQ, cebolla caramelizada y aderezo de la casa.',
+    category: 'hamburguesas',
+    basePrice: 105,
+    imageUrl: imgTragapuntos,
+    ingredients: [
+      'Carne de res 120gr',
+      'Queso amarillo',
+      'Aros de cebolla',
+      'Tocino',
+      'BBQ',
+      'Cebolla caramelizada',
+      'Aderezo de la casa',
+    ],
+    variants: [
+      { id: 'orig', name: 'Original', price: 105 },
+      { id: 'con-papas', name: 'Con Papas a la Francesa', price: 115 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+  {
+    id: 'la-directora',
+    name: 'La Directora',
+    description: 'Carne de res 120gr, guacamole, queso amarillo, jamón, tocino, lechuga y costra de queso.',
+    category: 'hamburguesas',
+    basePrice: 120,
+    imageUrl: imgDirectora,
+    ingredients: [
+      'Carne de res 120gr',
+      'Guacamole',
+      'Queso amarillo',
+      'Jamón',
+      'Tocino',
+      'Lechuga',
+      'Costra de queso',
+    ],
+    variants: [
+      { id: 'orig', name: 'Original', price: 120 },
+      { id: 'con-papas', name: 'Con Papas a la Francesa', price: 130 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+  {
+    id: 'la-reprobada',
+    name: 'La Reprobada',
+    description: '4 Boneless crujientes, queso gratinado derretido, tocino crujiente y salsa ranch.',
+    category: 'hamburguesas',
+    basePrice: 120,
+    badge: '¡Especialidad!',
+    imageUrl: imgLaReprobada,
+    ingredients: [
+      '4 Boneless de pollo',
+      'Queso gratinado',
+      'Tocino crujiente',
+      'Salsa ranch',
+    ],
+    variants: [
+      { id: 'orig', name: 'Original', price: 120 },
+      { id: 'con-papas', name: 'Con Papas a la Francesa', price: 130 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+
+  // --- PAPAS GAJO ---
+  {
+    id: 'papas-gajo',
+    name: 'Orden de Papas Gajo',
+    description: 'Generosa orden de papas gajo sazonadas. Elige tu opción: Originales o Con Queso cheddar derretido.',
+    category: 'gajos',
+    basePrice: 40,
+    imageUrl: imgPapasGajo,
+    variants: [
+      { id: 'orig', name: 'Originales', price: 40 },
+      { id: 'con-queso', name: 'Con Queso', price: 50 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+
+  // --- PAPAS EN CONO ---
+  {
+    id: 'cono-boneless',
+    name: 'Cono con Boneless',
+    description: 'Papas a la francesa sazonadas, trozos de boneless crujientes. ¡Tú le pones las salsas a tu gusto en persona! Aprovecha la promo por $110 con refresco.',
+    category: 'conos',
+    basePrice: 95,
+    badge: '¡PROMO $110 con Refresco!',
+    imageUrl: imgConoBoneless,
+    ingredients: ['Papas a la francesa', 'Boneless de pollo'],
+    variants: [
+      { id: 'orig', name: 'Original (Solo Cono)', price: 95 },
+      { id: 'promo-coca', name: 'Promo + Coca-Cola', price: 110 },
+      { id: 'promo-sabor', name: 'Promo + Refresco de Sabor', price: 110 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+  {
+    id: 'cono-pastor',
+    name: 'Cono con Pastor',
+    description: 'Papas a la francesa con carne al pastor, cebollita y cilantro. (Agotado por el momento)',
+    category: 'conos',
+    basePrice: 95,
+    badge: 'AGOTADO / SOLD OUT',
+    isSoldOut: true,
+    imageUrl: imgConoPastor,
+    ingredients: ['Papas a la francesa', 'Carne al pastor', 'Cebollita y cilantro'],
+    variants: [
+      { id: 'orig', name: 'Original (Solo Cono)', price: 95 },
+      { id: 'promo-coca', name: 'Promo + Coca-Cola', price: 110 },
+      { id: 'promo-sabor', name: 'Promo + Refresco de Sabor', price: 110 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+  {
+    id: 'cono-fajita',
+    name: 'Cono con Fajita / Bistec',
+    description: 'Papas a la francesa con fajita / bistec asado y sazonado. (Agotado por el momento)',
+    category: 'conos',
+    basePrice: 95,
+    badge: 'AGOTADO / SOLD OUT',
+    isSoldOut: true,
+    imageUrl: imgConoFajita,
+    ingredients: ['Papas a la francesa', 'Fajita / Bistec asado'],
+    variants: [
+      { id: 'orig', name: 'Original (Solo Cono)', price: 95 },
+      { id: 'promo-coca', name: 'Promo + Coca-Cola', price: 110 },
+      { id: 'promo-sabor', name: 'Promo + Refresco de Sabor', price: 110 },
+    ],
+    defaultVariant: 'orig',
+    allowAderezos: false,
+  },
+];
