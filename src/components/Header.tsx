@@ -34,14 +34,12 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-gradient-to-br from-amber-500 via-orange-600 to-red-600 p-0.5 shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform duration-200 shrink-0">
-              <div className="w-full h-full rounded-[14px] bg-zinc-950 p-0.5 flex items-center justify-center overflow-hidden">
-                <img
-                  src={logoImg}
-                  alt="Los Profes Logo"
-                  className="w-full h-full object-contain"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+              <img
+                src={logoImg}
+                alt="Los Profes Logo"
+                className="w-full h-full object-cover rounded-[14px]"
+                referrerPolicy="no-referrer"
+              />
             </div>
 
             <div>

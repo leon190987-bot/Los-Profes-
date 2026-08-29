@@ -171,7 +171,7 @@ export default function App() {
             <img
               src={logoImg}
               alt="Los Profes Logo"
-              className="w-12 h-12 object-contain rounded-xl bg-zinc-900 p-0.5 border border-zinc-800"
+              className="w-12 h-12 object-cover rounded-xl border border-zinc-800 shadow-md"
               referrerPolicy="no-referrer"
             />
             <div className="flex items-center gap-2 flex-wrap justify-center">
